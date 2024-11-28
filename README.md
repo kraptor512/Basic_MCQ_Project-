@@ -1,1 +1,1 @@
-# Basic_MCQ_Project-
+# Basic_MCQ_Project- It is a simple implementation of HTML,CSS,jQuery and Bootstrap. Here, you will find 5 MCQ questions each on different web page. It is created in such a way that if you do not answer one question then it will show a error message and will not proceed to the further question. I have also used pagination and liverly progress Bar to make it more attractive.
