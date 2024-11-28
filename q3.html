@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #1d4350, #a43931);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+       }
+    .container {
+      margin-top: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    .radio-group input {
+      margin: 10px 0;
+    }
+    .radio-group label {
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin: 10px;
+    }
+    .radio-group input[type="radio"]:hover + label {
+      color: #ffc107;
+      text-decoration: underline;
+    }
+    .pagination .page-link {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+    .pagination .page-link:hover {
+      background-color: #0056b3;
+    }
+    .pagination .page-item {
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .progress {
+      margin-top: 30px;
+      height: 30px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .progress-bar {
+      background-color: #4caf50;
+      height: 100%;
+      line-height: 30px;
+      font-size: 1rem;
+      transition: width 1.5s ease-in-out;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+
+      $('.progress-bar').css('width', '20%');
+      setTimeout(function () {
+        $('.progress-bar').css('width', '40%');
+      }, 200);
+
+      $('.page-link').click(function (event) {
+        if (!$('input[type="radio"]').is(':checked')) {
+          event.preventDefault(); 
+          alert("Please select an answer before proceeding!");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>MCQ TEST</h1>
+    <br>
+    <p>Q3) What kind of layout in Bootstrap is used for providing 100% width?</p>
+    <div class="radio-group text-left">
+      <input type="radio" id="option1" name="q3" value="Fixed layout">
+      <label for="option1">(a) Fixed layout</label><br>
+      
+      <input type="radio" id="option2" name="q3" value="Fluid layout">
+      <label for="option2">(b) Fluid layout</label><br>
+      
+      <input type="radio" id="option3" name="q3" value="dialogbox">
+      <label for="option3">(c) Both (a) and (b)</label><br>
+      
+      <input type="radio" id="option4" name="q3" value="modal">
+      <label for="option4">(d) None of the above</label>
+    </div>
+  
+    <br><br>
+    <ul class="pagination justify-content-between">
+      <li class="page-item">
+        <a href="q2.html" class="page-link"> &lt; Previous </a>
+      </li>
+      <li class="page-item">
+        <a href="q4.html" class="page-link"> Next &gt; </a>
+      </li>
+    </ul>
+    
+    <br>
+    <h2>Lively Progress Bar</h2>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 20%;">40%</div>
+    </div>
+  </div>
+</body>
+</html>
